@@ -1,0 +1,141 @@
+
+@keyframes blink {
+  0% {
+      color: #ff7f50; 
+      text-shadow: 0 0 10px rgba(255, 127, 80, 0.8);
+  }
+  50% {
+      color: #000; 
+      text-shadow: none;
+  }
+  100% {
+      color: #ff7f50; 
+      text-shadow: 0 0 10px rgba(255, 127, 80, 0.8);
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('weatherappig.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.App {
+  text-align: center;
+  display: flex;  
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%;
+}
+
+.App-title {
+  font-size: 2em;
+  color: #000;
+  font-weight: bold; 
+  margin-bottom: 20px;
+  animation: blink 1.5s infinite; 
+}
+
+
+.App-container {
+  display: flex;  
+  flex-direction: column; 
+  align-items: center; 
+  padding: 30px; 
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; 
+  max-width: 1000px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.1)
+  ), 
+  url('https://www.transparenttextures.com/patterns/cubes.png'); 
+  background-blend-mode: overlay;
+  background-color: #fff5e1; 
+}
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.search-box input {
+  padding: 15px;
+  flex: 1; 
+  border: 2px solid #ff7f50; 
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  color: #333;
+  padding-right: 120px; 
+}
+
+.search-box input:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+
+.search-box button {
+  padding: 15px 30px;
+  border: none;
+  background-color: #ff7f50; 
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-box button:hover {
+  background-color: #ff4500; 
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 24px;
+  color: #ff4500; 
+  margin-right: 10px; 
+}
+
+
+.weather-result {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-result h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.weather-result p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+
+.error {
+  color: red;
+  font-size: 16px;
+}
